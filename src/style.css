@@ -1,0 +1,41 @@
+body.bg-a { 
+  background: url(../assets/bg.gif);
+}
+body.bg-b { 
+  background: #fff;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  background-color: rgb(255,229,237);
+  background-image: -o-linear-gradient(bottom, rgb(255,229,237) 0%, rgb(224,255,233) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(255,229,237) 0%, rgb(224,255,233) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(255,229,237) 0%, rgb(224,255,233) 100%);
+  background-image: -ms-linear-gradient(bottom, rgb(255,229,237) 0%, rgb(224,255,233) 100%);
+  background-image: linear-gradient(bottom, rgb(255,229,237) 0%, rgb(224,255,233) 100%);
+
+}
+
+#contact { 
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #000;
+  font: bold italic 12px serif;
+  padding: 10px;
+}
+
+#compat { 
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font: bold italic 150px serif;
+  text-shadow: 0 3px 0 rgba(0,0,0,0.15);
+  padding: 20px 40px;
+  color: #fff;
+  z-index: 11;
+  pointer-events: none;
+}
