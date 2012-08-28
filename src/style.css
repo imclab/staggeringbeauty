@@ -22,21 +22,6 @@ body {
 
 }
 
-#contact { 
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #fff;
-  text-decoration: none;
-  font: bold italic 40px serif;
-  padding: 10px 20px;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
-  z-index: 12;
-}
-
-#contact:hover { 
-  color: #000;
-}
 
 #compat { 
   display: none;
@@ -51,7 +36,19 @@ body {
   pointer-events: none;
 }
 
-@-webkit-keyframes 'blink' {
+@-webkit-keyframes shake {
+    0% { left: 30px; }
+    50% { left: 0; }
+    100% { left: 30px; }
+}
+
+@-moz-keyframes shake {
+    0% { left: 30px; }
+    50% { left: 0; }
+    100% { left: 30px; }
+}
+
+@keyframes shake {
     0% { left: 30px; }
     50% { left: 0; }
     100% { left: 30px; }
@@ -71,15 +68,59 @@ body {
   -webkit-animation-direction: normal;
   -webkit-animation-duration: 0.2s;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-name: blink;
+  -webkit-animation-name: shake;
   -webkit-animation-timing-function: ease;
+  -moz-animation-direction: normal;
+  -moz-animation-duration: 0.2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: shake;
+  -moz-animation-timing-function: ease;
+  animation-direction: normal;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-name: shake;
+  animation-timing-function: ease;
 }
 
-#warning {
+#warning { 
+  font: bold 11px/14px sans-serif;
+  width: 240px;
+  border: 5px solid black;
+  text-align: center;
+  padding: 6px;
+  padding-bottom: 8px;
+  background-color: #fff;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  font: bold italic 12px/20px serif;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
-  padding: 10px;
+  left: 10px;
+  bottom: 10px;
+  z-index: 3;
+}
+#warning .english { 
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 2px;
+}
+#warning .chinese {
+  font-size: 14px;
+  vertical-align: middle;
+  display: inline-block;
+  /*margin-left: 10px;*/
+}
+#enquiries { 
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 3;
+}
+#enquiries a {
+  display: inline-block;
+  padding: 5px 7px;
+  text-decoration: none;
+  border-radius: 2px;
+  font: bold 12px sans-serif;
+  color: black;
+  text-transform: uppercase;
+}
+#enquiries a:hover {
+  background-color: #fff;
 }

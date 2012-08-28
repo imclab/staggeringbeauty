@@ -164,11 +164,11 @@ blinkTween1.delay(9000);
 blinkTween1.start();
 
 if (navigator.userAgent.match(/(iPad|iPhone|iPod|Android)/i)) {
-  document.getElementById('compat').style.display = 'block';
+  // document.getElementById('compat').style.display = 'block';
 }
 
 wrong = setTimeout(function() {
-  document.getElementById('compat').style.display = 'none';
+  // document.getElementById('compat').style.display = 'none';
   document.getElementById('shake').style.display = 'block';
 }, 15000);
 
