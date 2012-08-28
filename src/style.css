@@ -32,7 +32,7 @@ body {
   text-shadow: 0 3px 0 rgba(0,0,0,0.15);
   padding: 20px 40px;
   color: #fff;
-  z-index: 11;
+  z-index: 2;
   pointer-events: none;
 }
 
@@ -55,15 +55,18 @@ body {
 }
 
 #shake { 
+  word-break: break-word;
+  bottom: 0;
+  right: 0;
   display: none;
   position: absolute;
   top: 0;
   left: 0;
-  font: bold italic 150px serif;
+  font: bold italic 110px serif;
   text-shadow: 0 3px 0 rgba(0,0,0,0.15);
   padding: 20px 40px;
   color: #fff;
-  z-index: 11;
+  z-index: 2;
   pointer-events: none;
   -webkit-animation-direction: normal;
   -webkit-animation-duration: 0.2s;
@@ -123,4 +126,27 @@ body {
 }
 #enquiries a:hover {
   background-color: #fff;
+}
+
+#embed { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 4;
+  display: none;
+}
+#embed textarea { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 270px;
+  height: 100px;
+  word-break: break-word;
+  margin-left: -158px;
+  margin-top: -50px;
+  font: 13px Monaco, monospace;
+  padding: 20px;
 }

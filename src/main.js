@@ -42,6 +42,26 @@ soundManager.onready(function() {
 var img = new Image();
 img.src = '../assets/bg.gif';
 
+var embedButton = document.getElementById('embed-button');
+var embedShade = document.getElementById('embed');
+var embedText = document.getElementById('embed-text');
+
+embedButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  embedShade.style.display = 'block';
+  return false;
+}, false);
+
+embedShade.addEventListener('click', function() {
+  embedShade.style.display = 'none';
+}, false);
+
+embedText.addEventListener('click', function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  this.select();
+  return false;
+})
 
 var restDrag = 0.8;
 var physics = new ParticleSystem(+0.34, -3, 0, restDrag);
