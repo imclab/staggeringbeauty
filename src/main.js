@@ -163,9 +163,14 @@ blinkTween4.chain(blinkTween1);
 blinkTween1.delay(9000);
 blinkTween1.start();
 
-if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) {
-  document.getElementById('compat').style.display = 'block'
+if (navigator.userAgent.match(/(iPad|iPhone|iPod|Android)/i)) {
+  document.getElementById('compat').style.display = 'block';
 }
+
+wrong = setTimeout(function() {
+  document.getElementById('compat').style.display = 'none';
+  document.getElementById('shake').style.display = 'block';
+}, 15000);
 
 // hack for 1px line
 document.getElementById('canvas').height++;
@@ -397,7 +402,7 @@ function setPositions() {
 
 function updateAppearance() {
 
-  if (numLoaded == 2 &&stress > 80) {
+  if (stress > 80) {
 
     hue += stress > 300 ? Math.pow(stress/5, 2) : stress;
 
@@ -408,6 +413,8 @@ function updateAppearance() {
     pathTongue.strokeWidth = pathMouth.strokeWidth*0.65;
     // pathShadow.strokeColor = '#000';
     peaking = true;
+    clearTimeout(wrong);
+    document.getElementById('shake').style.display = 'none';
 
   } else {
 

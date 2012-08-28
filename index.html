@@ -2,7 +2,6 @@
 <html>
 <head>
 
-  <meta name="robots" content="noindex" />
 
   <script type="text/javascript" src="lib/paper.js"></script>
   <!--<script type="text/javascript" src="lib/dat.gui.min.js"></script>-->
@@ -21,12 +20,21 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="description" content="A website to remember." />
   <link rel="image_src" href="assets/poster.png" />
-
+  <style type="text/css">
+  #warning {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font: bold italic 12px/20px serif;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+    padding: 10px;
+  }
+  </style>
 </head>
 <body>
 
   <canvas id="canvas" resize></canvas>
-  <a href="mailto:inquiries@staggeringbeauty.com" id="contact">INQUIRIES</a>
+  <a href="mailto:inquiries@staggeringbeauty.com" id="contact">Inquiries</a>
 
   <script type="text/javascript">
 
@@ -42,9 +50,17 @@
 
   </script>
 
+  <div id="warning">
+    Those at risk of epileptic seizures<br/> should choose a different website.
+  </div>
   <div id="compat">
     It's way better on a desktop.
   </div>
+
+  <div id="shake">
+    Shake vigorously
+  </div>
+
 
 </body>
 </html>

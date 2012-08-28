@@ -4,10 +4,14 @@ body.bg-a {
 body.bg-b { 
   background: #fff;
 }
+html { 
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  height: 100%;
 
   background-color: rgb(255,229,237);
   background-image: -o-linear-gradient(bottom, rgb(255,229,237) 0%, rgb(224,255,233) 100%);
@@ -22,9 +26,16 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  color: #fff;
+  text-decoration: none;
+  font: bold italic 40px serif;
+  padding: 10px 20px;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+  z-index: 12;
+}
+
+#contact:hover { 
   color: #000;
-  font: bold italic 12px serif;
-  padding: 10px;
 }
 
 #compat { 
@@ -38,4 +49,37 @@ body {
   color: #fff;
   z-index: 11;
   pointer-events: none;
+}
+
+@-webkit-keyframes 'blink' {
+    0% { left: 30px; }
+    50% { left: 0; }
+    100% { left: 30px; }
+}
+
+#shake { 
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font: bold italic 150px serif;
+  text-shadow: 0 3px 0 rgba(0,0,0,0.15);
+  padding: 20px 40px;
+  color: #fff;
+  z-index: 11;
+  pointer-events: none;
+  -webkit-animation-direction: normal;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: blink;
+  -webkit-animation-timing-function: ease;
+}
+
+#warning {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font: bold italic 12px/20px serif;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+  padding: 10px;
 }
